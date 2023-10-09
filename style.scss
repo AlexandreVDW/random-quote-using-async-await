@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+body{
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .quote{
+            width: 70%;
+            text-align: center;
+            margin-top: 25%;
+            margin-bottom: 15%;
+            line-height: 32px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 28px;
+        }
+        .picture{
+            border-radius: 25%;
+            object-fit: cover;
+            height: 250px;
+            width: 250px;
+            box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+        }
+        .author{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .Name{
+                font-size: 28px;
+                margin-bottom: 0%;
+                padding-bottom: 0%;
+                font-family: 'Dancing Script', cursive;
+            }
+            .total{
+                margin-top: 0%;
+                padding-top: 0%;
+                font-style: italic;
+            }
+        }
+        .link{
+            text-decoration: none;
+            color: black;
+        }
+        
+    }
+    .footer{
+        display: flex;
+        justify-content: center;
+        margin-top: 20%;
+        button {
+            --b: 5px;   /* border thickness */
+            --s: 12px; /* size of the corner */
+            --c: #373B44;
+    
+            padding: calc(.05em + var(--s)) calc(.3em + var(--s));
+            color: var(--c);
+            --_p: var(--s);
+            background:
+                conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--c) 0)
+                var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+            transition: .5s linear, color 0s, background-color 0s, transform 0s 0.1s;
+            outline: var(--b) solid #0000;
+            outline-offset: .2em;
+            font-family: system-ui, sans-serif;
+            font-weight: bold;
+            font-size: 2rem; /* changed from 4rem */
+            cursor: pointer;
+            border: none;
+            margin: .1em;
+            &:hover {
+                --_p: 0px;
+                background: var(--c);
+                color: #fff;
+            }
+            &:focus-visible {
+                --_p: 0px;
+                outline-color: var(--c);
+                outline-offset: .05em;
+            }
+            &:active {
+                background: var(--c);
+                color: #fff;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1000px) {
+    body{
+        .container{
+            .quote{
+                width: 70%;
+                font-size: 32px;
+                margin-top: 15%;
+                margin-bottom: 5%;
+            }
+            .picture{
+                height: 350px;
+                width: 350px;
+            }
+            .author{
+                .Name{
+                    font-size: 32px;
+                }
+            }
+        }
+        .footer{
+            margin-top: 5%;
+        }
+    }
+}
